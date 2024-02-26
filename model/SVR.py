@@ -15,7 +15,7 @@ scaler = MinMaxScaler(feature_range=(0, 6))
 X_scaled = scaler.fit_transform(X)
 
 # 3. 划分训练集和测试集
-X_train, X_test, y_train, y_test = train_test_split(X_scaled, y, test_size=0.15, random_state=42)
+X_train, X_test, y_train, y_test = train_test_split(X_scaled, y, test_size=0.15, random_state=21)
 
 # 4. 使用SVR模型训练
 svr = SVR(C=4)

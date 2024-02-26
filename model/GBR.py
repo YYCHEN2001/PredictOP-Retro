@@ -16,7 +16,7 @@ scaler = MinMaxScaler(feature_range=(0, 6))
 X_scaled = scaler.fit_transform(X)
 
 # 3. 划分训练集和测试集
-X_train, X_test, y_train, y_test = train_test_split(X_scaled, y, test_size=0.15, random_state=42)
+X_train, X_test, y_train, y_test = train_test_split(X_scaled, y, test_size=0.15, random_state=21)
 
 # 4. 使用GBR模型训练，设置超参数
 gbr = GradientBoostingRegressor(learning_rate=0.4, max_depth=3, n_estimators=31, random_state=3, subsample=0.9)

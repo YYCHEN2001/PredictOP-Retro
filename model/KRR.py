@@ -15,7 +15,7 @@ scaler = MinMaxScaler(feature_range=(0, 6))
 X_scaled = scaler.fit_transform(X)
 
 # 3. 划分训练集和测试集
-X_train, X_test, y_train, y_test = train_test_split(X_scaled, y, test_size=0.15, random_state=42)
+X_train, X_test, y_train, y_test = train_test_split(X_scaled, y, test_size=0.15, random_state=21)
 
 # 4. 使用KRR模型训练，设置超参数alpha=0.1, coef0=4, degree=2, kernel='poly'
 krr = KernelRidge(alpha=0.1, kernel='poly', degree=2, coef0=4)

@@ -1,9 +1,9 @@
-import pandas as pd
 import numpy as np
+import pandas as pd
+from sklearn.metrics import mean_absolute_error, mean_squared_error, r2_score
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import MinMaxScaler
 from sklearn.svm import SVR
-from sklearn.metrics import mean_absolute_error, mean_squared_error, r2_score
 
 # 1. 读取数据
 data = pd.read_csv('dataset.csv')
@@ -24,6 +24,7 @@ svr.fit(X_train, y_train)
 # 5. 预测
 y_pred_train = svr.predict(X_train)
 y_pred_test = svr.predict(X_test)
+
 
 # 6. 计算评估指标
 def calculate_metrics(y_true, y_pred):
